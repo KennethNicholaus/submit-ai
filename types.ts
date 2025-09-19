@@ -12,3 +12,9 @@ export interface CaseStudy {
   description: string;
   imageUrl: string;
 }
+
+export interface Article {
+  title: string;
+  excerpt: string;
+  url: string;
+}
