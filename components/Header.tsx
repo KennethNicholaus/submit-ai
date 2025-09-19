@@ -17,7 +17,7 @@ const Header: React.FC = () => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-slate-900/80 backdrop-blur-sm">
       <div className="container mx-auto px-6 py-4">
         <div className="flex justify-between items-center">
-          <a href="#" className="block" aria-label="Back to home">
+          <a href="#home" className="block" aria-label="Back to home">
             <SubmitAiLogo className="h-8 w-auto" />
           </a>
           <nav className="hidden md:flex space-x-8">
