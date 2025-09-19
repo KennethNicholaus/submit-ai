@@ -10,4 +10,5 @@ export interface CaseStudy {
   industry: string;
   title: string;
   description: string;
+  imageUrl: string;
 }
