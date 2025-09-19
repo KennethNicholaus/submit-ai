@@ -13,7 +13,7 @@ import Footer from './components/Footer';
 
 const App: React.FC = () => {
   return (
-    <div className="min-h-screen bg-slate-900 font-sans leading-normal tracking-tight">
+    <div className="min-h-screen bg-gray-950 font-sans leading-normal tracking-tight">
       <Header />
       <main>
         <Hero />

@@ -42,28 +42,28 @@ const caseStudiesList: CaseStudy[] = [
 
 const CaseStudies: React.FC = () => {
   return (
-    <section id="case-studies" className="py-20 bg-slate-900 scroll-mt-24">
+    <section id="case-studies" className="py-20 bg-gray-900 scroll-mt-24">
       <div className="container mx-auto px-6">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-white">Success Stories</h2>
-          <p className="text-slate-400 mt-2">See how we drive real-world impact across industries.</p>
+          <p className="text-gray-400 mt-2">See how we drive real-world impact across industries.</p>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {caseStudiesList.map((study, index) => (
-            <div key={index} className="group bg-slate-800/50 rounded-lg flex flex-col overflow-hidden shadow-lg transition-all duration-300 hover:shadow-2xl hover:shadow-sky-500/30 hover:-translate-y-1">
+            <div key={index} className="group bg-gray-800/60 rounded-lg flex flex-col overflow-hidden shadow-lg transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/30 hover:-translate-y-1">
               <div className="relative h-48 overflow-hidden">
                 <img 
                   src={study.imageUrl} 
                   alt={study.title} 
                   className="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105" 
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-800/80 via-slate-800/20 to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-gray-800/80 via-gray-800/20 to-transparent"></div>
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ai-grid-overlay"></div>
               </div>
               <div className="p-6 flex flex-col flex-grow">
-                <span className="text-sky-400 font-semibold mb-2 text-sm uppercase tracking-wider">{study.industry}</span>
+                <span className="text-cyan-400 font-semibold mb-2 text-sm uppercase tracking-wider">{study.industry}</span>
                 <h3 className="text-xl font-bold text-white mb-3">{study.title}</h3>
-                <p className="text-slate-300 leading-relaxed flex-grow">{study.description}</p>
+                <p className="text-gray-300 leading-relaxed flex-grow">{study.description}</p>
               </div>
             </div>
           ))}

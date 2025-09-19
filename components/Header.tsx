@@ -15,7 +15,7 @@ const Header: React.FC = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-slate-900/80 backdrop-blur-sm">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-gray-950/80 backdrop-blur-sm">
       <div className="container mx-auto px-6 py-4">
         <div className="flex justify-between items-center">
           <a href="#home" className="block" aria-label="Back to home">
@@ -26,7 +26,7 @@ const Header: React.FC = () => {
               <a
                 key={link.name}
                 href={link.href}
-                className="text-slate-300 hover:text-sky-400 transition-colors"
+                className="text-gray-300 hover:text-cyan-400 transition-colors"
               >
                 {link.name}
               </a>
@@ -35,7 +35,7 @@ const Header: React.FC = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-slate-300 hover:text-white focus:outline-none"
+              className="text-gray-300 hover:text-white focus:outline-none"
               aria-label="Toggle menu"
             >
               <svg
@@ -57,14 +57,14 @@ const Header: React.FC = () => {
         </div>
       </div>
       {isOpen && (
-        <div className="md:hidden bg-slate-900">
+        <div className="md:hidden bg-gray-950">
           <nav className="px-6 pt-2 pb-4 space-y-2">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
                 onClick={() => setIsOpen(false)}
-                className="block text-slate-300 hover:text-sky-400 transition-colors py-2"
+                className="block text-gray-300 hover:text-cyan-400 transition-colors py-2"
               >
                 {link.name}
               </a>

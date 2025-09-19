@@ -22,11 +22,11 @@ const Contact: React.FC = () => {
 
   if (submitted) {
     return (
-      <section id="contact" className="py-20 bg-slate-900 scroll-mt-24">
+      <section id="contact" className="py-20 bg-gray-900 scroll-mt-24">
         <div className="container mx-auto px-6">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold text-white mb-6">Thank You!</h2>
-            <p className="text-slate-300 text-lg leading-relaxed">
+            <p className="text-gray-300 text-lg leading-relaxed">
               Your message has been sent. Our team will get back to you shortly.
             </p>
           </div>
@@ -36,11 +36,11 @@ const Contact: React.FC = () => {
   }
 
   return (
-    <section id="contact" className="py-20 bg-slate-900 scroll-mt-24">
+    <section id="contact" className="py-20 bg-gray-900 scroll-mt-24">
       <div className="container mx-auto px-6">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-white mb-6">Let's Build the Future Together</h2>
-          <p className="text-slate-300 text-lg leading-relaxed mb-10">
+          <p className="text-gray-300 text-lg leading-relaxed mb-10">
             Ready to unlock the power of AI for your enterprise? Reach out to our team to start the conversation.
           </p>
           <form className="space-y-6" onSubmit={handleSubmit}>
@@ -51,7 +51,7 @@ const Contact: React.FC = () => {
                 required
                 value={name}
                 onChange={(e) => setName(e.target.value)}
-                className="w-full bg-slate-800 text-white p-4 rounded-lg border border-slate-700 focus:ring-2 focus:ring-sky-500 focus:outline-none"
+                className="w-full bg-gray-800 text-white p-4 rounded-lg border border-gray-700 focus:ring-2 focus:ring-cyan-500 focus:outline-none"
                 aria-label="Your Name"
               />
               <input 
@@ -60,7 +60,7 @@ const Contact: React.FC = () => {
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="w-full bg-slate-800 text-white p-4 rounded-lg border border-slate-700 focus:ring-2 focus:ring-sky-500 focus:outline-none"
+                className="w-full bg-gray-800 text-white p-4 rounded-lg border border-gray-700 focus:ring-2 focus:ring-cyan-500 focus:outline-none"
                 aria-label="Your Email"
               />
             </div>
@@ -70,12 +70,12 @@ const Contact: React.FC = () => {
               required
               value={message}
               onChange={(e) => setMessage(e.target.value)}
-              className="w-full bg-slate-800 text-white p-4 rounded-lg border border-slate-700 focus:ring-2 focus:ring-sky-500 focus:outline-none"
+              className="w-full bg-gray-800 text-white p-4 rounded-lg border border-gray-700 focus:ring-2 focus:ring-cyan-500 focus:outline-none"
               aria-label="Your Message"
             ></textarea>
             <button
               type="submit"
-              className="bg-sky-500 hover:bg-sky-600 text-white font-bold py-3 px-8 rounded-full text-lg transition-colors duration-300 w-full md:w-auto"
+              className="bg-gradient-to-r from-teal-500 to-cyan-600 hover:from-teal-600 hover:to-cyan-700 text-white font-bold py-3 px-8 rounded-full text-lg transition-all duration-300 w-full md:w-auto shadow-lg hover:shadow-cyan-500/40"
             >
               Send Message
             </button>

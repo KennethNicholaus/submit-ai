@@ -37,11 +37,11 @@ const articlesList: Article[] = [
 
 const Articles: React.FC = () => {
   return (
-    <section id="articles" className="py-20 bg-slate-900/50 scroll-mt-24">
+    <section id="articles" className="py-20 bg-gray-900/70 scroll-mt-24">
       <div className="container mx-auto px-6">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-white">Thought Leadership</h2>
-          <p className="text-slate-400 mt-2">Exploring the frontiers of AI, strategy, and innovation.</p>
+          <p className="text-gray-400 mt-2">Exploring the frontiers of AI, strategy, and innovation.</p>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {articlesList.map((article, index) => (
@@ -50,14 +50,14 @@ const Articles: React.FC = () => {
               href={article.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="group bg-slate-800/50 p-6 rounded-lg flex flex-col justify-between shadow-lg transition-all duration-300 hover:shadow-2xl hover:shadow-sky-500/30 hover:-translate-y-1"
+              className="group bg-gray-800/60 p-6 rounded-lg flex flex-col justify-between shadow-lg transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/30 hover:-translate-y-1"
             >
               <div>
-                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-sky-400 transition-colors">{article.title}</h3>
-                <p className="text-slate-300 leading-relaxed mb-4">{article.excerpt}</p>
+                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">{article.title}</h3>
+                <p className="text-gray-300 leading-relaxed mb-4">{article.excerpt}</p>
               </div>
               <div className="mt-auto">
-                <span className="text-sky-400 font-semibold text-sm inline-flex items-center">
+                <span className="text-cyan-400 font-semibold text-sm inline-flex items-center">
                   Read Article
                   <ArrowRightIcon className="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
                 </span>

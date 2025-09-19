@@ -11,16 +11,16 @@ const clientsList = [
 
 const Clients: React.FC = () => {
   return (
-    <section id="clients" className="py-20 bg-slate-900/50 scroll-mt-24">
+    <section id="clients" className="py-20 bg-gray-900/70 scroll-mt-24">
       <div className="container mx-auto px-6">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-white">Trusted By Industry Leaders</h2>
-          <p className="text-slate-400 mt-2">We partner with Fortune 500 companies and innovative startups.</p>
+          <p className="text-gray-400 mt-2">We partner with Fortune 500 companies and innovative startups.</p>
         </div>
         <div className="max-w-5xl mx-auto">
           <div className="flex flex-wrap justify-center items-center gap-x-8 gap-y-6">
             {clientsList.map((client, index) => (
-              <div key={index} className="text-slate-400 text-lg font-medium opacity-80 hover:opacity-100 transition-opacity">
+              <div key={index} className="text-gray-400 text-lg font-medium opacity-80 hover:opacity-100 transition-opacity">
                 {client}
               </div>
             ))}

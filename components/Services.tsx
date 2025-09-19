@@ -22,20 +22,20 @@ const servicesList: Service[] = [
 
 const Services: React.FC = () => {
   return (
-    <section id="services" className="py-20 bg-slate-900/50 scroll-mt-24">
+    <section id="services" className="py-20 bg-gray-900/70 scroll-mt-24">
       <div className="container mx-auto px-6">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-white">Our Services</h2>
-          <p className="text-slate-400 mt-2">Empowering your business with comprehensive AI capabilities.</p>
+          <p className="text-gray-400 mt-2">Empowering your business with comprehensive AI capabilities.</p>
         </div>
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {servicesList.map((service, index) => (
-            <div key={index} className="bg-slate-800/50 p-8 rounded-lg text-center">
-              <div className="text-sky-400 inline-block mb-4">
+            <div key={index} className="bg-gray-800/60 p-8 rounded-lg text-center">
+              <div className="text-cyan-400 inline-block mb-4">
                 {service.icon}
               </div>
               <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
-              <p className="text-slate-300 leading-relaxed">{service.description}</p>
+              <p className="text-gray-300 leading-relaxed">{service.description}</p>
             </div>
           ))}
         </div>
