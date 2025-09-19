@@ -2,11 +2,21 @@ import React, { useState } from 'react';
 
 const Contact: React.FC = () => {
   const [submitted, setSubmitted] = useState(false);
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // In a real application, you would handle form submission here (e.g., API call)
-    console.log('Form submitted');
+    
+    const recipient = 'kenneth.nicholaus@submit-ai.com';
+    const subject = `Contact Form Inquiry from ${name}`;
+    const body = `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`;
+    
+    const mailtoLink = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    
+    window.location.href = mailtoLink;
+
     setSubmitted(true);
   };
 
@@ -39,20 +49,29 @@ const Contact: React.FC = () => {
                 type="text" 
                 placeholder="Your Name"
                 required
+                value={name}
+                onChange={(e) => setName(e.target.value)}
                 className="w-full bg-slate-800 text-white p-4 rounded-lg border border-slate-700 focus:ring-2 focus:ring-sky-500 focus:outline-none"
+                aria-label="Your Name"
               />
               <input 
                 type="email" 
                 placeholder="Your Email"
                 required
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 className="w-full bg-slate-800 text-white p-4 rounded-lg border border-slate-700 focus:ring-2 focus:ring-sky-500 focus:outline-none"
+                aria-label="Your Email"
               />
             </div>
             <textarea
               placeholder="Your Message"
               rows={5}
               required
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
               className="w-full bg-slate-800 text-white p-4 rounded-lg border border-slate-700 focus:ring-2 focus:ring-sky-500 focus:outline-none"
+              aria-label="Your Message"
             ></textarea>
             <button
               type="submit"
