@@ -9,7 +9,7 @@ import {
   LinkedInIcon,
   DocumentTextIcon,
   GitHubIcon
-} from './icons/Icons.tsx';
+} from './icons/Icons';
 
 const socialLinks = [
   {

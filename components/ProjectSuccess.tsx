@@ -1,5 +1,5 @@
 import React from 'react';
-import { ShieldCheckIcon } from './icons/Icons.tsx';
+import { ShieldCheckIcon } from './icons/Icons';
 
 const ProjectSuccess: React.FC = () => {
   return (
