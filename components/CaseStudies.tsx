@@ -1,5 +1,5 @@
 import React from 'react';
-import type { CaseStudy } from '../types';
+import type { CaseStudy } from '../types.ts';
 
 const caseStudiesList: CaseStudy[] = [
   {

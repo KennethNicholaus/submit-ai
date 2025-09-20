@@ -1,6 +1,6 @@
 import React from 'react';
-import type { Article } from '../types';
-import { ArrowRightIcon } from './icons/Icons';
+import type { Article } from '../types.ts';
+import { ArrowRightIcon } from './icons/Icons.tsx';
 
 const articlesList: Article[] = [
   {

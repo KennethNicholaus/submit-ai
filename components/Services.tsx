@@ -1,6 +1,6 @@
 import React from 'react';
-import type { Service } from '../types';
-import { BrainCircuitIcon, RocketIcon, BarChartIcon } from './icons/Icons';
+import type { Service } from '../types.ts';
+import { BrainCircuitIcon, RocketIcon, BarChartIcon } from './icons/Icons.tsx';
 
 const servicesList: Service[] = [
   {

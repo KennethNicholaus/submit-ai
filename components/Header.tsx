@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { SubmitAiLogo } from './icons/Icons';
+import { SubmitAiLogo } from './icons/Icons.tsx';
 
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);

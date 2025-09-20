@@ -1,5 +1,5 @@
 import React from 'react';
-import { BadgeCheckIcon } from './icons/Icons';
+import { BadgeCheckIcon } from './icons/Icons.tsx';
 
 const certificationsList = [
   'AI Tools/Platforms: Hugging Face, LangChain, OpenAI APIs; Cloud Al (GCP Vertex Al, AWS SageMaker, Azure ML)',

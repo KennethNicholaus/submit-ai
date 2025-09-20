@@ -1,15 +1,15 @@
 import React from 'react';
-import Header from './components/Header';
-import Hero from './components/Hero';
-import ProjectSuccess from './components/ProjectSuccess';
-import About from './components/About';
-import Skills from './components/Skills';
-import Services from './components/Services';
-import CaseStudies from './components/CaseStudies';
-import Articles from './components/Articles';
-import Clients from './components/Clients';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
+import Header from './components/Header.tsx';
+import Hero from './components/Hero.tsx';
+import ProjectSuccess from './components/ProjectSuccess.tsx';
+import About from './components/About.tsx';
+import Skills from './components/Skills.tsx';
+import Services from './components/Services.tsx';
+import CaseStudies from './components/CaseStudies.tsx';
+import Articles from './components/Articles.tsx';
+import Clients from './components/Clients.tsx';
+import Contact from './components/Contact.tsx';
+import Footer from './components/Footer.tsx';
 
 const App: React.FC = () => {
   return (
