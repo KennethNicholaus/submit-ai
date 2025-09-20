@@ -1,13 +1,16 @@
 import React, { useState } from 'react';
 
 const Contact: React.FC = () => {
-  const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    if (isSubmitting) return;
+
+    setIsSubmitting(true);
     
     const recipient = 'kenneth.nicholaus@submit-ai.com';
     const subject = `Contact Form Inquiry from ${name}`;
@@ -17,23 +20,14 @@ const Contact: React.FC = () => {
     
     window.location.href = mailtoLink;
 
-    setSubmitted(true);
+    // Reset the form and button after a delay to allow the mail client to open
+    setTimeout(() => {
+      setIsSubmitting(false);
+      setName('');
+      setEmail('');
+      setMessage('');
+    }, 3000);
   };
-
-  if (submitted) {
-    return (
-      <section id="contact" className="py-20 bg-gray-900 scroll-mt-24">
-        <div className="container mx-auto px-6">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-white mb-6">Thank You!</h2>
-            <p className="text-gray-300 text-lg leading-relaxed">
-              Your message has been sent. Our team will get back to you shortly.
-            </p>
-          </div>
-        </div>
-      </section>
-    );
-  }
 
   return (
     <section id="contact" className="py-20 bg-gray-900 scroll-mt-24">
@@ -75,9 +69,10 @@ const Contact: React.FC = () => {
             ></textarea>
             <button
               type="submit"
-              className="bg-gradient-to-r from-teal-500 to-cyan-600 hover:from-teal-600 hover:to-cyan-700 text-white font-bold py-3 px-8 rounded-full text-lg transition-all duration-300 w-full md:w-auto shadow-lg hover:shadow-cyan-500/40"
+              disabled={isSubmitting}
+              className="bg-gradient-to-r from-teal-500 to-cyan-600 hover:from-teal-600 hover:to-cyan-700 text-white font-bold py-3 px-8 rounded-full text-lg transition-all duration-300 w-full md:w-auto shadow-lg hover:shadow-cyan-500/40 disabled:opacity-60 disabled:cursor-not-allowed"
             >
-              Send Message
+              {isSubmitting ? 'Opening Your Email App...' : 'Send Message'}
             </button>
           </form>
         </div>
