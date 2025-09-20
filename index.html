@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Submit AI | AI Strategy & Transformation</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Add Babel Standalone for in-browser JSX/TSX transpilation -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   <script type="importmap">
 {
   "imports": {
@@ -32,6 +34,7 @@
 </head>
   <body class="bg-gray-950 text-gray-200">
     <div id="root"></div>
-    <script type="module" src="./index.tsx"></script>
+    <!-- Changed type to "text/babel" and added data-type="module" for Babel to process -->
+    <script type="text/babel" data-type="module" src="./index.tsx"></script>
   </body>
 </html>
